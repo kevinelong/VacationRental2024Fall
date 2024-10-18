@@ -15,11 +15,12 @@
 <main>
     <h1>Overnight</h1>
     <form id="overnightForm">
-        <input type="date" id="when" name="when" required>
+        Nights:<input type="number" id="nights" name="nights" required value="1">
+        <br>
+        Check-In:<input type="date" id="when" name="when" required>
         <label><input type="radio" value="king" name="room">King</label>
         <label><input type="radio" value="queen" name="room">Queen</label>
-        <label><input type="radio" value="suite" name="room">Suite</label>
-
+        <label><input type="radio" value="suite" name="room" checked>Suite</label>
         <input type="submit" value="Save">
     </form>
     <div id="output">?</div>

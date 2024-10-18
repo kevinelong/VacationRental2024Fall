@@ -1,12 +1,10 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-
     const overnightForm = document.getElementById("overnightForm");
     const when = document.getElementById("when");
     const output = document.getElementById("output");
-
     overnightForm.addEventListener("submit", (event) => {
         event.preventDefault();
+        const nights = Number(document.getElementById("nights").value);
         const room = document.querySelector('input[name="room"]:checked').value;
         const checkInDate = new Date(when.value);
         const month = checkInDate.getMonth();
@@ -25,7 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 rate = 150
             }
         }
-        output.innerText = rate + " " + room;
+        let subtotal = nights * rate;
+        let tax = 0.12 * subtotal;
+        let total = tax + subtotal;
+        output.innerText = `SUBTOTAL: ${subtotal}\nTAX: ${tax}\nTOTAL: ${total}. `;
     });
 
 });//end loaded
