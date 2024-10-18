@@ -1,0 +1,25 @@
+body{
+    background-color: antiquewhite;
+}
+nav{
+    background-color: forestgreen;
+}
+nav a{
+    color: goldenrod;
+    text-decoration: none;
+    padding: 1rem;
+    display: inline-block;
+}
+nav li:hover a{
+    color: white;
+    text-decoration: underline;
+}
+nav li{
+    display: inline-block;
+}
+main{
+    padding: 1.5rem;
+}
+footer{
+    text-align: center;
+}
